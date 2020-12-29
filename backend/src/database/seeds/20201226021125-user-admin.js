@@ -1,5 +1,5 @@
 module.exports = {
-  up: async (queryInterface) => {
+  up: async (queryInterface) =>
     queryInterface.bulkInsert(
       'users',
       [
@@ -11,11 +11,12 @@ module.exports = {
           cpf: '49064177449',
           phone: '3112344321',
           email: 'admin@gnvendas.com',
+          created_at: new Date(),
+          updated_at: new Date(),
         },
       ],
       {}
-    );
-  },
+    ),
 
   down: async (queryInterface) => {
     queryInterface.bulkDelete('users', null, {});
