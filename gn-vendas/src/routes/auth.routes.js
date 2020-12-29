@@ -4,7 +4,6 @@ import Login from '../pages/Login';
 import SignUp from '../pages/SingUp';
 import { useAuth } from '../hooks/auth';
 import AdminRoutes from './admin.routes';
-import CartReview from '../pages/CartReview';
 import SaleSuccess from '../pages/SaleSuccess';
 
 function AuthRoutes() {
@@ -20,7 +19,6 @@ function AuthRoutes() {
       {signed && user.is_admin && <AdminRoutes />}
       {signed && (
         <>
-          <Route path="/cart" component={CartReview} />
           <Route path="/sale/success" component={SaleSuccess} />
         </>
       )}

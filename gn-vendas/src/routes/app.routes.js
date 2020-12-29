@@ -8,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Home from '../pages/Home';
 import Product from '../pages/Product';
 import AuthRoutes from './auth.routes';
+import CartReview from '../pages/CartReview';
 
 const StyledToastContainer = styled(ToastContainer).attrs({
   // custom props
@@ -44,6 +45,7 @@ export default function AppRoutes() {
       <AuthProvider>
         <Route path="/" exact component={Home} />
         <Route path="/product/:id" component={Product} />
+        <Route path="/cart" component={CartReview} />
 
         <AuthRoutes />
       </AuthProvider>
